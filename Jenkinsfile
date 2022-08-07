@@ -7,8 +7,8 @@ pipeline {
                 echo 'Creating Stack'
                 aws cloudformation create-stack \
                 --stack-name myteststack \
-                --template-body file:'blueGreen.yaml' \
-                --parameters file:'param.json'
+                --template-body file:{name:'blueGreen.yaml'} \
+                --parameters file:{name:'param.json'}
             }
         }
         
