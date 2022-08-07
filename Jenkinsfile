@@ -5,16 +5,10 @@ pipeline {
         stage('Create Stack') {
             steps {
                 echo 'Creating Stack'
-                bash 'createStack.sh'
+                aws cloudformation create-stack --stack-name blue-green --template-body blueGreen.yaml --parameters param.json
             }
         }
-        stage('Delete Stack') {
-            steps {
-                echo 'Deleting Stack'
-                bash 'deleteStack.sh'
-                echo 'stack deleted'
-            }
-        }
+        
 
         
     }
