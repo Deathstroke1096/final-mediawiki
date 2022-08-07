@@ -17,11 +17,11 @@
     },
     {
         "ParameterKey": "MyVPCId",
-        "ParameterValue": "vpc-03654bed168c0309d"
+        "ParameterValue": "vpc-0e7f651cb20310d61"
     },
     {
         "ParameterKey": "Subnets",
-        "ParameterValue": "subnet-006510db1dbc71dcb,subnet-05f31667ea90c6e85,subnet-0fae85a966c767471,subnet-05cdb8e34b57cea8f,subnet-065a1a47f988865e5,subnet-0ff0bc36223ea450f"
+        "ParameterValue": "subnet-0c00e97a2324b7cf5,subnet-0c85b816a4a883ee0"
     },
     {
         "ParameterKey": "InstanceType",
