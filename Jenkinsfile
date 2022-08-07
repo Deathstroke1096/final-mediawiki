@@ -5,13 +5,13 @@ pipeline {
         stage('Create Stack') {
             steps {
                 echo 'Creating Stack'
-                exec createStack.sh
+                sh 'createStack.sh'
             }
         }
         stage('Delete Stack') {
             steps {
                 echo 'Deleting Stack'
-                exec deleteStack.sh
+                sh 'deleteStack.sh'
                 echo 'stack deleted'
             }
         }
