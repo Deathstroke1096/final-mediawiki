@@ -1,0 +1,13 @@
+echo -e "Creating Stack ....."
+aws cloudformation create-stack --stack-name blue-green --template-body file://blueGreen.yaml --parameters file://param.json
+echo -e "Stack will be created in few moments...\n"
+aws cloudformation wait stack-create-complete --stack-name blue-green
+echo -e "Stack Created Successfully !!! \n"
+
+
+
+echo "Cretae inventory"
+python3 dynamicInventory.py 
+
+echo "Run playbook"
+ansible-playbook playbook.yaml -i invertory.txt
