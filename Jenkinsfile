@@ -5,7 +5,7 @@ pipeline {
         stage('Create Stack') {
             steps {
                 echo 'Creating Stack'
-                "./createStack.sh".execute()
+                "bash createStack.sh".execute()
             }
         }
                 
