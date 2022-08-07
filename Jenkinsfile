@@ -5,17 +5,9 @@ pipeline {
         stage('Create Stack') {
             steps {
                 echo 'Creating Stack'
-                createStack.sh
+                'createStack.sh'.execute()
             }
         }
-        stage('Delete Stack') {
-            steps {
-                echo 'Deleting Stack'
-                deleteStack.sh
-                echo 'stack deleted'
-            }
-        }
-
-        
+                
     }
 }
