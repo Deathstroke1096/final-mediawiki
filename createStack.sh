@@ -1,8 +1,5 @@
-#!/bin/bash
-
 echo -e "Creating Stack ....."
 
-#STACK_NAME=$1
 
 aws cloudformation create-stack --stack-name blue-green --template-body file://blueGreen.yaml --parameters file://param.json
 echo -e "Stack will be created in few moments...\n"

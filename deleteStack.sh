@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo -e "Deleting the Stack... "
 
 aws cloudformation delete-stack --stack-name blue-green
