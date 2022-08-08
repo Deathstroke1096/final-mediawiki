@@ -8,6 +8,12 @@ pipeline {
                 sh 'sh createStack.sh'
             }
         }
+        stage('Create Dynamic inventory') {
+            steps {
+                echo 'Creating Dynamic Inventory'
+                sh 'python3 dynamicInventory.py'
+            }
+        }
                 
     }
 }
