@@ -14,6 +14,11 @@ pipeline {
                 sh 'python3 dynamicInventory.py'
             }
         }
-                
+        stage('Deploy mediawiki') {
+            steps {
+                echo 'Deploying mediawiki'
+                sh 'ansible-playbook playbook.yaml -i inventory.txt'
+            }
+        }        
     }
 }
