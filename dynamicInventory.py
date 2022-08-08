@@ -1,6 +1,7 @@
 import boto3
 from botocore.exceptions import ClientError
 import sys
+import time
 
 def getInstanceIdByTagName(value, reg):
     filters = [{'Name':'tag:aws:cloudformation:stack-name','Values': ['%s' % (value)]}]
@@ -46,6 +47,7 @@ def writeToInventoryFile(instanceList):
     contents = "".join(contents)
     f.write(contents)
     f.close()
+    time.sleep(120)
 
 
 instanceList = getInstanceIdByTagName('blue-green','us-east-1')
