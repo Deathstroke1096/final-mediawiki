@@ -29,7 +29,7 @@
     },
     {
         "ParameterKey": "KeyName",
-        "ParameterValue": "my_ec2_key"
+        "ParameterValue": "key"
     },
     {
         "ParameterKey": "InternalELBName",

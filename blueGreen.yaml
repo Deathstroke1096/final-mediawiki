@@ -301,7 +301,7 @@ Parameters:
   KeyName:
     Description: EC2 key pair
     Type: String
-    Default: my_ec2_key
+    Default: key
   InternalELBName:
     Description: Internal ELB Name Assigned
     Type: String
