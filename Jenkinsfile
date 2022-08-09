@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy mediawiki') {
             steps {
                 echo 'Deploying mediawiki'
-                sh 'ansible-playbook playbook.yaml -i inventory.txt'
+                sh 'ansible-playbook playbook.yaml -i inventory.txt -u root'
             }
         }        
     }
