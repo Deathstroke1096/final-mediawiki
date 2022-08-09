@@ -47,7 +47,7 @@ def writeToInventoryFile(instanceList):
     contents = "".join(contents)
     f.write(contents)
     f.close()
-    time.sleep(120)
+    #time.sleep(120)
 
 
 instanceList = getInstanceIdByTagName('blue-green','us-east-1')
