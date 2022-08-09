@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Create Stack') {
+        stage('Delete Stack') {
             steps {
                 echo 'Creating Stack'
                 sh 'sh deleteStack.sh'
