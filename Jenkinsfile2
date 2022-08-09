@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Deploy mediawiki') {
+            steps {
+                echo 'Deploying mediawiki'
+                sh 'ansible-playbook playbook.yaml -i inventory.txt -u sunny'
+            }
+        }        
+    }
+}
